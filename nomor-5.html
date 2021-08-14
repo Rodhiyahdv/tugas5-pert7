@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rodhiyah | Tugas 5 | Tweet</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Jawaban Soal No.5 -->    
+    <div class="column1">
+        <p class="title-p">Create Tweet</p>
+        <textarea class="resize-textarea" id="tweet" placeholder="Tweet"></textarea><br>
+        <button onclick="addTweet();">Submit</button><br>
+    </div>
+    
+    <div class="column2">        
+            <p class="title-p">Your Tweet</p>
+            <p class="your-tweet" id="contentTweet"></p>
+    </div>
+   
+    
+    <script type="text/javascript">
+        // Soal No.5
+        // Buatlah sebuah aplikasi twitter untuk membuat sebuah tweet dan menampilkannya.
+        // Gunakan Array untuk menampung data tweet
+
+        // Jawaban
+        let tempArray = [];
+
+        function addTweet() {
+            let inputTweet = document.getElementById('tweet');
+            tempArray.push(inputTweet.value);
+            inputTweet.value='';
+            showTweet();
+        }
+
+        function showTweet() {
+            let html = '';
+            for (let i=0; i<tempArray.length; i++) {
+                html += tempArray[i]+'<br><br>';
+            }
+            let show = document.getElementById('contentTweet');
+            show.innerHTML = html;
+        }
+    </script>
+</body>
+</html>

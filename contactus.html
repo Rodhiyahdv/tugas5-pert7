@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rodhiyah | Tugas 5 | Contact Us</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Tugas DOM
+    Buat 1 buah form contact us lalu tampilkan inputnya ketika user melakukan event onclick -->
+
+    <header>
+        <h4>Contact Us</h4>
+    </header>
+    <section>
+        <table>
+            <tr>
+                <td><label>Nama</label></td>
+                <td><input type="text" class="textbox-input" id="txtNama" placeholder="Nama Lengkap"></td>
+            </tr>
+            <tr>
+                <td><label>Email</label></td>
+                <td><input type="text" class="textbox-input" id="txtEmail" placeholder="abc@gmail.com"></td>
+            </tr>
+            <tr>
+                <td><label>Pesan</label></td>
+                <td><textarea class="resize-textarea" id="txtPesan" placeholder="Tulis pesan anda disini"></textarea></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><button id="submit" onclick="submitMsg();">Submit</button></td>
+            </tr>
+        </table>
+    </section>    
+    <hr>
+    <table>
+        <tr>
+            <td>Nama</td>
+            <td>:</td>
+            <td><p id="nama"></p></td>
+        </tr>
+        <tr>
+            <td>Email</td>
+            <td>:</td>
+            <td><p id="email"></p></td>
+        </tr>
+        <tr>
+            <td>Pesan</td>
+            <td>:</td>
+            <td><p id="pesan"></p></td>
+        </tr>
+    </table>
+
+    <script type="text/javascript">
+        function submitMsg() {
+            let nm = document.getElementById('txtNama').value;
+            let em = document.getElementById('txtEmail').value;
+            let ps = document.getElementById('txtPesan').value;
+            document.getElementById('nama').innerHTML = nm;
+            document.getElementById('email').innerHTML = em;
+            document.getElementById('pesan').innerHTML = ps;
+            
+        }
+    
+    </script>
+</body>
+</html>

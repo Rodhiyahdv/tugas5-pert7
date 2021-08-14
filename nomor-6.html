@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rodhiyah | Tugas 5 | Registration</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <p class="title-p">Registration</p>
+    </header>
+    <div class="register">
+        <input type="text" class="textbox-input" id="txtUsername" placeholder="Username"><br>
+        <input type="text" class="textbox-input" id="txtPassword" placeholder="Password"><br>
+        <button onclick="addRegistration();">Submit</button><br>
+    </div>    
+    <hr>
+    <p class="title-p">List Registration</p>
+    <ul>
+        <li><p id="showUsername">Username</p></li>
+        <li><p id="showPassword">Password</p></li>
+    </ul>
+    <script type="text/javascript">
+        // Soal No.6
+        // Buatlah sebuah program registrasi berisi username dan password
+        // Lakukan validasi berikut : username minimal 6 karakter, password minimal 8 karakter
+        // Saat user melakukan registrasi simpan data didalam Array
+        // Tampilkan data setiap user melakukan registrasi
+        // Saat password ditampilkan, ganti dengan string yang berbeda. Gunakan replace method
+
+        // Jawaban
+
+        function addRegistration() {
+            let username = document.getElementById('txtUsername').value;
+            let password = document.getElementById('txtPassword').value;
+
+            if (username.length < 6) {
+                alert ('Username minimal 6 karakter');
+                document.getElementById('txtUsername').focus();
+            }
+            else if (password.length < 8) {
+                alert ('Password minimal 8 karakter');
+                document.getElementById('txtPassword').focus();
+            }
+            else {
+                alert ('Registrasi berhasil');
+                showRegistration();
+            }
+        }
+
+        function showRegistration() {
+            let text1 = document.getElementById('txtUsername').value;
+            let text2 = document.getElementById('txtPassword').value;
+            let text3 = text2.replace(document.getElementById('txtPassword').value, 
+            function (x){
+                return x.toUpperCase();
+            });
+
+            document.getElementById('showUsername').innerHTML = text1;
+            document.getElementById('showPassword').innerHTML = text3;            
+        }
+    </script>
+</body>
+</html>

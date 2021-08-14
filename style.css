@@ -1,0 +1,53 @@
+body {    
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.column1 {
+    width: 50%;
+    text-align: center;
+    float: left;
+}
+
+.column2 {
+    width: 50%;
+    float: right;
+    text-align: center;
+}
+
+button {
+    background-color: royalblue;
+    border: none;
+    color:white;
+    padding: 10px 20px;
+    margin: 4px 2px;
+    text-align: center;
+}
+
+.resize-textarea {
+    width: 300px;
+    height: 100px;
+}
+
+.textbox-input {
+    width: 200px;
+    height: 30px;
+    display: inline-block;
+    margin: 8px 0;
+}
+
+.register {
+    text-align: center;
+}
+
+.title-p {
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.your-tweet {
+    padding-left: 10px;
+    padding-right: 20px;
+    margin: 0 10px;
+    text-align: justify;
+}
